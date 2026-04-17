@@ -17,7 +17,7 @@
 % Font options
 \usepackage[sfdefault,light]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
-\linespread{1.05}
+\linespread{1.0}
 
 \pagestyle{fancy} \setlength{\footskip}{3.60004pt}
 \fancyhf{}
@@ -37,8 +37,8 @@
 \setlength{\tabcolsep}{0in}
 
 % Section formatting
-\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{12pt plus 2pt minus 1pt}{4pt plus 1pt minus 1pt}
+\titleformat{\section}{\large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt plus 1pt minus 1pt}{3pt plus 1pt minus 1pt}
 
 % Ensure PDF is machine readable
 \pdfgentounicode=1
@@ -46,42 +46,47 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{\item \small{#1}}
 \newcommand{\resumeSubheading}[4]{
-\vspace{-1pt}\item
+\vspace{-2pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \textit{#4} \\
-  \end{tabular*}\vspace{-7pt}
+    \textbf{#1} & \small #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-6pt}
 }
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-2pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 \begin{document}
 
 % ─── HEADER ───────────────────────────────────────────────────────────────────
 \begin{center}
-  \textbf{\Huge James Saiban} \\[3pt]
-  \textit{Full-Stack Engineer \textbar{} SaaS Builder \textbar{} Freelance Web Developer} \\[4pt]
+  \textbf{\Huge James Saiban} \\[2pt]
+  \textit{Full-Stack Engineer \textbar{} SaaS Builder \textbar{} Freelance Web Developer} \\[3pt]
   \small
-  \faPhone\ (517) 200-8248 \quad $|$ \quad
-  \href{mailto:saibanjamesr@gmail.com}{\faEnvelope\ saibanjamesr@gmail.com} \quad $|$ \quad
-  \href{https://linkedin.com/in/james-saiban-ba3b60217}{\faLinkedin\ james-saiban} \quad $|$ \quad
-  \href{https://github.com/SaibanJ}{\faGithub\ SaibanJ} \quad $|$ \quad
+  \faPhone\ (517) 200-8248 \;$|$\;
+  \href{mailto:saibanjamesr@gmail.com}{\faEnvelope\ saibanjamesr@gmail.com} \;$|$\;
+  \href{https://linkedin.com/in/james-saiban-ba3b60217}{\faLinkedin\ james-saiban} \;$|$\;
+  \href{https://github.com/SaibanJ}{\faGithub\ SaibanJ} \;$|$\;
   \href{https://saibanjamesr.dev}{\faGlobe\ saibanjamesr.dev}
 \end{center}
 
+\vspace{-4pt}
+
 % ─── SUMMARY ──────────────────────────────────────────────────────────────────
 \section*{Summary}
-Self-taught full-stack engineer and SaaS founder with 3+ years of hands-on experience designing, building, and shipping production web applications. I own and operate WebConcoction — a web hosting and development business — serving real clients with domain registration, managed cPanel hosting, and custom website builds. After stepping away from college to support my family and navigating homelessness, I taught myself software development from the ground up through determination and faith. Every project I ship is proof that resilience, self-discipline, and a genuine love for the craft are more than enough.
+\small Self-taught full-stack engineer and SaaS founder with 3+ years shipping production web applications. I own and operate WebConcoction — a hosting and web development business serving real clients. After leaving college to support my family and navigating homelessness, I built my skills from the ground up. Every project I ship is proof that resilience and a genuine love for the craft are more than enough.
+
+\vspace{-2pt}
 
 % ─── TECHNICAL SKILLS ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 \resumeSubHeadingList
   \resumeItem{\textbf{Languages}: JavaScript, TypeScript, HTML, CSS, C++, Java}
   \resumeItem{\textbf{Frameworks \& Libraries}: React 19, Next.js 15 (App Router), Tailwind CSS 4, Shadcn/UI, Radix UI, Framer Motion, React Hook Form, Zod, Express, Prisma}
-  \resumeItem{\textbf{Auth \& AI}: Clerk, Supabase Auth, Vapi AI (voice agents), Stripe (payments \& webhooks)}
-  \resumeItem{\textbf{Infrastructure \& Tools}: Git, Vercel, DigitalOcean, Supabase, Docker, Kubernetes, GitHub Actions, CI/CD, Bun, pnpm, ESLint, Prettier, Sentry, WHMCS, WHM/cPanel API, Namecheap API}
+  \resumeItem{\textbf{Tools \& Platforms}: Git, Vercel, DigitalOcean, Supabase, Stripe, Clerk, Vapi AI, Docker, Kubernetes, GitHub Actions, Bun, Sentry, WHM/cPanel API, Namecheap API}
 \resumeSubHeadingListEnd
+
+\vspace{-2pt}
 
 % ─── PROJECTS ─────────────────────────────────────────────────────────────────
 \section{Projects}
@@ -89,42 +94,33 @@ Self-taught full-stack engineer and SaaS founder with 3+ years of hands-on exper
 
   \resumeSubheading
     {WebConcoction — Web Hosting \& Development SaaS}{2025 -- Present}
-    {Founder \& Full-Stack Engineer}{\href{https://webconcoction.com}{webconcoction.com} $|$ Next.js 15, TypeScript, Supabase, Stripe, Vercel}
+    {Founder \& Full-Stack Engineer}{Next.js 15, TypeScript, Supabase, Stripe, Vercel}
     \resumeSubHeadingList
-      \resumeItem{\textbullet\ Built and launched a full SaaS platform offering domain registration, managed cPanel hosting plans, and professional website builds for small businesses}
-      \resumeItem{\textbullet\ Architected a secure WHM/Namecheap API proxy on DigitalOcean with a fixed whitelisted IP, enabling Vercel-hosted serverless functions to perform privileged server management tasks}
-      \resumeItem{\textbullet\ Integrated Stripe live payments (webhook-verified), Supabase auth and database, and automated cPanel account provisioning via WHM API}
-      \resumeItem{\textbullet\ Implemented SSO login so customers can access their cPanel dashboard directly from the client portal with one click}
+      \resumeItem{\textbullet\ Built a full SaaS platform offering domain registration, managed cPanel hosting, and professional website builds for small businesses}
+      \resumeItem{\textbullet\ Architected a secure WHM/Namecheap API proxy on DigitalOcean enabling Vercel serverless functions to perform privileged server management with a fixed whitelisted IP}
+      \resumeItem{\textbullet\ Integrated Stripe live payments with webhook verification, Supabase auth, and automated cPanel account provisioning via WHM API}
+      \resumeItem{\textbf{Live:} \href{https://webconcoction.com}{webconcoction.com}}
     \resumeSubHeadingListEnd
 
   \resumeSubheading
     {iTeachAll — AI Voice Tutoring Platform}{2024 -- Present}
-    {Full-Stack SaaS Project}{\href{https://iteachall.vercel.app}{iteachall.vercel.app} $|$ Next.js 15, TypeScript, Supabase, Vapi AI, Clerk, Vercel}
+    {Full-Stack SaaS Project}{Next.js 15, TypeScript, Supabase, Vapi AI, Clerk, Vercel}
     \resumeSubHeadingList
-      \resumeItem{\textbullet\ Developed a real-time AI education platform where students hold live voice conversations with subject-specific AI tutors across 9+ subjects}
-      \resumeItem{\textbullet\ Integrated Vapi AI for voice agent functionality with server-side rendering via Next.js App Router and Clerk for authentication}
-      \resumeItem{\textbullet\ Built a personalized learning dashboard (\textit{My Journey}) tracking session history and progress; deployed with Sentry error monitoring}
-      \resumeItem{\textbullet\ Enabled users to create and configure custom AI companion tutors with subject and personality settings}
+      \resumeItem{\textbullet\ Built a real-time AI education platform where students hold live voice conversations with subject-specific AI tutors across 9+ subjects}
+      \resumeItem{\textbullet\ Integrated Vapi AI voice agents, Clerk authentication, and a personalized progress dashboard; deployed with Sentry monitoring}
+      \resumeItem{\textbf{Live:} \href{https://iteachall.vercel.app}{iteachall.vercel.app}}
     \resumeSubHeadingListEnd
 
   \resumeSubheading
-    {MICraft Home Solutions — Client Business Website}{2025}
+    {MICraft Home Solutions — Client Website}{2025}
     {Freelance Project}{Next.js 15, TypeScript, Tailwind CSS, Nodemailer, Vercel}
     \resumeSubHeadingList
-      \resumeItem{\textbullet\ Designed and delivered a professional marketing website for a Michigan-based home repair and improvement company}
-      \resumeItem{\textbullet\ Built a functional server-side contact form with secure email delivery via Nodemailer and Gmail app passwords}
-      \resumeItem{\textbullet\ Implemented fully responsive layouts optimized for mobile, tablet, and desktop with SEO best practices throughout}
-    \resumeSubHeadingListEnd
-
-  \resumeSubheading
-    {Personal Portfolio Website}{2025}
-    {Personal Project}{\href{https://saibanjamesr.dev}{saibanjamesr.dev} $|$ Next.js 15, TypeScript, Tailwind CSS 4, Framer Motion, Radix UI}
-    \resumeSubHeadingList
-      \resumeItem{\textbullet\ Built a fully responsive, accessible portfolio with dark/light mode, smooth Framer Motion animations, and a working contact form with server-side email delivery}
-      \resumeItem{\textbullet\ Implemented accessibility-first components using Radix UI primitives and full type-safety with TypeScript throughout}
+      \resumeItem{\textbullet\ Designed and delivered a professional marketing website for a Michigan home repair company with a server-side contact form and fully responsive layouts}
     \resumeSubHeadingListEnd
 
 \resumeSubHeadingListEnd
+
+\vspace{-2pt}
 
 % ─── EXPERIENCE ───────────────────────────────────────────────────────────────
 \section{Experience}
@@ -134,9 +130,8 @@ Self-taught full-stack engineer and SaaS founder with 3+ years of hands-on exper
     {WebConcoction}{2025 -- Present}
     {Founder \& Owner}{Michigan, USA (Remote)}
     \resumeSubHeadingList
-      \resumeItem{\textbullet\ Founded and operate a web hosting and development business offering domain registration, managed cPanel hosting, and custom website design and development}
-      \resumeItem{\textbullet\ Manage all client relationships, technical infrastructure, billing, and support end-to-end}
-      \resumeItem{\textbullet\ Deliver WordPress and custom-coded sites using modern web technologies, handling SEO, deployment, and ongoing maintenance}
+      \resumeItem{\textbullet\ Founded and operate a web hosting and development business — handling client relationships, infrastructure, billing, and support end-to-end}
+      \resumeItem{\textbullet\ Deliver custom WordPress and Next.js sites with domain setup, deployment, SEO, and ongoing maintenance}
     \resumeSubHeadingListEnd
 
   \resumeSubheading
@@ -145,25 +140,18 @@ Self-taught full-stack engineer and SaaS founder with 3+ years of hands-on exper
     \resumeSubHeadingList
       \resumeItem{\textbullet\ Consistently meet sales targets by educating customers on tech protection plans and closing in-home consultations}
       \resumeItem{\textbullet\ Travel to customer homes to diagnose and resolve tech issues covered under active insurance plans}
-      \resumeItem{\textbullet\ Applied strong communication and product knowledge to drive new enrollments across both plan tiers}
-    \resumeSubHeadingListEnd
-
-  \resumeSubheading
-    {Cintas Corporation}{2023 -- 2025}
-    {Stockroom Coordinator}{Michigan, USA}
-    \resumeSubHeadingList
-      \resumeItem{\textbullet\ Managed inventory systems and stockroom operations using SAP, ensuring accuracy and minimizing fulfillment delays}
     \resumeSubHeadingListEnd
 
   \resumeSubheading
     {Freelance Web Developer}{2021 -- Present}
     {Self-Employed}{Michigan, USA (Remote)}
     \resumeSubHeadingList
-      \resumeItem{\textbullet\ Designed and built client websites from scratch using React, Next.js, and WordPress, delivering responsive, production-ready solutions}
-      \resumeItem{\textbullet\ Handled full project lifecycle: scoping, design, development, deployment, domain setup, and post-launch support}
+      \resumeItem{\textbullet\ Designed and built client websites using React, Next.js, and WordPress — handling full project lifecycle from scoping through post-launch support}
     \resumeSubHeadingListEnd
 
 \resumeSubHeadingListEnd
+
+\vspace{-2pt}
 
 % ─── EDUCATION ────────────────────────────────────────────────────────────────
 \section{Education}
@@ -171,13 +159,8 @@ Self-taught full-stack engineer and SaaS founder with 3+ years of hands-on exper
   \resumeSubheading
     {Jackson Community College}{Jackson, MI}
     {A.A.S. in Software Development (Incomplete — left to support family)}{2017 -- 2020}
-\resumeSubHeadingListEnd
-
-% ─── CERTIFICATIONS & LEARNING ────────────────────────────────────────────────
-\section{Certifications \& Continued Learning}
-\resumeSubHeadingList
-  \resumeItem{Harvard CS50: Introduction to Computer Science — completed majority of coursework (edX)}
-  \resumeItem{Self-directed learning in full-stack engineering, cloud infrastructure, SaaS architecture, and AI integration}
+  \vspace{2pt}
+  \resumeItem{\small Harvard CS50: Introduction to Computer Science — majority of coursework completed (edX)}
 \resumeSubHeadingListEnd
 
 \end{document}
